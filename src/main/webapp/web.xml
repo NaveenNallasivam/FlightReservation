@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">  
+  <display-name>BasicWebApplication</display-name>  
+ 	<welcome-file-list>
+ 		<welcome-file>index.html</welcome-file>
+ 	</welcome-file-list>
+  <servlet>  
+    <servlet-name>firstPage</servlet-name>  
+    <servlet-class>main.firstPage</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>firstPage</servlet-name>  
+    <url-pattern>*/firstPage</url-pattern>  
+  </servlet-mapping>  
+  <servlet>
+  	<servlet-name>scoring</servlet-name>
+  	<servlet-class>main.scoring</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>scoring</servlet-name>
+  	<url-pattern>*/scoring</url-pattern>
+  </servlet-mapping>
+   <servlet>
+  	<servlet-name>userInfo</servlet-name>
+  	<servlet-class>main.userInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>userInfo</servlet-name>
+  	<url-pattern>*/userInfo</url-pattern>
+  </servlet-mapping>
+   <servlet>
+  	<servlet-name>signup</servlet-name>
+  	<servlet-class>main.signup</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>signup</servlet-name>
+  	<url-pattern>*/signup</url-pattern>
+  </servlet-mapping>
+</web-app>  

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Flight Reservation</title>
+</head>
+<style>
+	table{
+		width:70%;
+  		text-align:center;
+  		
+  		background-color:#ff6666;
+  		opacity:0.75;
+  		border-radius:15%;
+	}
+	td{
+		width:50%;
+	}
+	.container{
+		padding:150px 150px 150px 280px;
+	}
+	body{
+		background-color:#ebebe0;
+		background-image: url("bg.jpg");
+		background-size: cover;
+		
+	}
+
+</style>
+<body>
+	<p style="color:red">Reserve your flights</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<form name="Hello" id="Hello" action="firstPage" method="post"  >
+					<table>
+						<tr style="text-align:center;background-color:gray">
+							<td><b>Please enter credentials</b></td>
+						</tr>
+						<tr>
+							<td style="text-align:left"><b>Customer Id:</b></td>
+							<td><input type="text" name="userName" id="userName"/><br><br></td>
+						</tr>
+						<tr>
+							<td style="text-align:left"><b>Password:</b></td>
+							<td><input type="password" name="password" id="password"/><br><br></td>
+						</tr>
+						<tr>
+							<td style="text-align:right"><input type="submit" name="Login" value="Login"></input><br></td>
+				</form>
+					<td style="text-align:left"><form name="signup" id="signup" action="signupPage.html" method="post">
+						<input type="submit" value="signup" name="signupSubmit" />
+					</form></td></tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -36,4 +36,20 @@
   	<servlet-name>signup</servlet-name>
   	<url-pattern>*/signup</url-pattern>
   </servlet-mapping>
+  <servlet>
+	<servlet-name>displayFlightDetails</servlet-name>
+	<servlet-class>main.displayFlightDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>displayFlightDetails</servlet-name>
+	<url-pattern>*/displayFlightDetails</url-pattern>
+  </servlet-mapping>
+ <servlet>
+	<servlet-name>displayTrainDetails</servlet-name>
+	<servlet-class>main.displayTrainDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>displayTrainDetails</servlet-name>
+	<url-pattern>*/displayTrainDetails</url-pattern>
+  </servlet-mapping>
 </web-app>  

@@ -12,24 +12,57 @@
 <title>Enter details here</title>
 </head>
 <body>
- <table class="table table-bordered">
- 	<thead>
- 		<tr>
- 			<th>Source: <input type="text"/></th>
- 		</tr>
- 		<tr>
- 			<th>Destination: <input type="text"/></th>
- 		</tr>
- 		<tr>
- 			<th>Date:<input type="datetime-local"/></th>
- 		</tr>
- 		<tr>
- 			<th>No of passengers:<input type="number"/></th>
- 		</tr>
- 		<tr>
- 			<th>Class:<select name="class"><option value="sleeper"/>Sleeper<option value="semi-sleeper"/>Semi-sleeper</select></th>
- 		</tr>
- 	</thead>
- </table>
+<div class="row" style="text-align: center; color: #9999ff">
+		<div class="col-sm-6">
+			<form action="displayTrainDetails" id="trainDetails" method="post" onsubmit="return(validate(document.getElementById('quantity').value,document.getElementById('date').value))">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th style="text-align: right">Source:</th>
+							<th style="text-align: left"><select id="source"
+								name="source">
+									<option value="mumbai">Mumbai</option>
+									<option value="chennai">Chennai</option>
+									<option value="bengaluru">Bengaluru</option>
+									<option value="hyderabad">Hyderabad</option>
+									<option value="comibatore">Coimbatore</option>
+							</select></th>
+						</tr>
+						<tr>
+							<th style="text-align: right">Destination:</th>
+							<th><select id="destination" name="destination">
+									<option value="mumbai">Mumbai</option>
+									<option value="chennai">Chennai</option>
+									<option value="bengaluru">Bengaluru</option>
+									<option value="hyderabad">Hyderabad</option>
+									<option value="comibatore">Coimbatore</option>
+							</select></th>
+						</tr>
+						<tr>
+							<th style="text-align: right">Date:</th>
+							<th style="text-align: left"><input name="date" id="date"
+								type="datetime-local" /></th>
+						</tr>
+						<tr>
+							<th style="text-align: right">No of passengers:</th>
+							<th style="text-align: left"><input name="quantity" id="quantity"
+								type="number"/></th>
+						</tr>
+						<tr>
+							<th style="text-align: right">Berth</th>
+							<th><select id="berth" name="berth">
+									<option value="sleeper">Sleeper</option>
+									<option value="semi-sleeper">Semi-sleeper</option>
+							</select></th>
+						</tr>
+						<tr style="text-align: center">
+							<td><button>Submit</button></td>
+						</tr>
+					</thead>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
 </body>
 </html>

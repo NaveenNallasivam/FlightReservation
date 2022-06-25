@@ -38,6 +38,7 @@ public class firstPage extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		if(request.getParameter("signupSubmit")!=null) {
 			System.out.println("i am working");
 			RequestDispatcher view = request.getRequestDispatcher("firstPage.html");
@@ -61,6 +62,7 @@ public class firstPage extends HttpServlet {
 			    	  System.out.printf(enteredPassword);
 			    	  System.out.println(password);
 			    	  if(enteredPassword.equals(password)&&!enteredPassword.isEmpty()) {
+			    		  RetrieveProfileInfo.retrieveData(customerId);
 			    		view.forward(request, response);
 			    	  }
 			    	  else {

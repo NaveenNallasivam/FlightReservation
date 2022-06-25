@@ -12,21 +12,29 @@
 <title>Flight Detaills</title>
 </head>
 <body>
- <table class="table table-bordered">
+<div class="row" style="text-align:center;color:#9999ff">
+	<div class="col-sm-6" >
+		<table class="table table-bordered">
  	<thead>
  		<tr>
- 			<th>Source: <input type="text"/></th>
+ 			<th style="text-align:right">Source:</th>
+ 			<th style="text-align:left"> <input type="text"/></th>
  		</tr>
  		<tr>
- 			<th>Destination: <input type="text"/></th>
+ 			<th style="text-align:right">Destination:</th>
+ 			<th style="text-align:left"> <input type="text"/></th>
  		</tr>
  		<tr>
- 			<th>Date:<input type="datetime-local"/></th>
+ 			<th style="text-align:right">Date:</th>
+ 			<th style="text-align:left"><input type="datetime-local"/></th>
  		</tr>
  		<tr>
- 			<th>No of passengers:<input type="number"/></th>
+ 			<th style="text-align:right">No of passengers:</th>
+ 			<th style="text-align:left"><input type="datetime-local"/></th>
  		</tr>
  	</thead>
  </table>
+	</div>
+</div>
 </body>
 </html>

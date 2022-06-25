@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script lang="text/javascript" src="flightApi.js"></script>
+<title>Flight Detaills</title>
+</head>
+<body>
+	<div class="row" style="text-align: center; color: #9999ff">
+		<div class="col-sm-6">
+			<form action="displayFlightDetails" id="flightDetails" method="post" onsubmit="return(validate(document.getElementById('quantity').value,document.getElementById('date').value))">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th style="text-align: right">Source:</th>
+							<th style="text-align: left"><select id="source"
+								name="source">
+									<option value="mumbai">Mumbai</option>
+									<option value="chennai">Chennai</option>
+									<option value="bengaluru">Bengaluru</option>
+									<option value="hyderabad">Hyderabad</option>
+									<option value="comibatore">Coimbatore</option>
+							</select></th>
+						</tr>
+						<tr>
+							<th style="text-align: right">Destination:</th>
+							<th><select id="destination" name="destination">
+									<option value="mumbai">Mumbai</option>
+									<option value="chennai">Chennai</option>
+									<option value="bengaluru">Bengaluru</option>
+									<option value="hyderabad">Hyderabad</option>
+									<option value="comibatore">Coimbatore</option>
+							</select></th>
+						</tr>
+						<tr>
+							<th style="text-align: right">Date:</th>
+							<th style="text-align: left"><input name="date" id="date"
+								type="datetime-local" /></th>
+						</tr>
+						<tr>
+							<th style="text-align: right">No of passengers:</th>
+							<th style="text-align: left"><input name="quantity" id="quantity"
+								type="number"/></th>
+						</tr>
+						<tr style="text-align: center">
+							<td><button>Submit</button></td>
+						</tr>
+					</thead>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

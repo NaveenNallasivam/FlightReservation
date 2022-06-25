@@ -46,7 +46,7 @@ public class signup extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
         Random rand=new Random();
-        customerId=rand.nextInt(100);
+        customerId=rand.nextInt(1000);
     }
 
 	/**

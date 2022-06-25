@@ -12,17 +12,20 @@
 	var enable=0;
 	function verifyPassword(){
 		document.getElementById("alert").style.display="block";
-		document.getElementById("submit").disabled=true;
+		//document.getElementById("submit").disabled=true;
 		var password=document.getElementById("password");
 		var verifypassword=document.getElementById("confirmpassword");
 		if(password.value==verifypassword.value){
 			document.getElementById("alert").style.display="none";
-			document.getElementById("submit").disabled=false;
+			//document.getElementById("submit").disabled=false;
 		}	
-		verifyIfEmpty();
+		else{
+			return false;
+		}
 	}
 	function verifyIfEmpty(){
-		
+		var bool=verifyPassword();
+		if(bool==false)return false;
 		var firstname=document.getElementById("firstName");
 		var password=document.getElementById("password");
 		var mail=document.getElementById("mailid");
@@ -30,29 +33,36 @@
 		var contact=document.getElementById("contactno");
 		var gender=document.getElementById("gender");
 		if(firstname.value.length ==0 || password.value.length ==0 || mail.value.length ==0 || address.value.length ==0 || address.value.length ==0 || contact.value.length==0 || Male.value.length==0||Female.value.length==0){
-			document.getElementById("submit").disabled=true;
-			document.getElementById("Male").checked=false;
-			document.getElementById("Female").checked=false;
+			//document.getElementById("submit").disabled=true;
+			//document.getElementById("Male").checked=false;
+			//document.getElementById("Female").checked=false;
 			if(firstName.value.length==0){
 				alert("firstname is necessary");
+				return false;
 			}
 			if(password.value.length==0){
 				alert("password is mandatory");
+				return false;
 			}
 			 if(mail.value.length==0){
 				alert("mail is mandatory");
+				return false;
 			}
 			if(address.value.length==0){
 				alert("address is mandatory");
+				return false;
 			}
 			 if(contact.value.length==0){
 				alert("contact iis necessary");
+				return false;
 			}
 			if(Male.value.length==0){
 				alert("gender is mandatory");
+				return false;
 			}
 			if(Female.value.length==0){
 				alert("gender is mandatory");
+				return false;
 			}
 		}
 		
@@ -91,7 +101,7 @@ table{
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<form name="signup" id="signup" action="signup">
+				<form name="signup" id="signup" action="signup" onsubmit="return(verifyIfEmpty())">
 					<table>
 						<tr>
 							<td style="text-align:center"><b>*Enter mail id:</b></td>
@@ -136,11 +146,11 @@ table{
 						</tr>
 						<tr>
 							<td style="text-align:center"><b>*Gender:</b></td>
-							<td>Male<input type="radio" name="gender" id="Male" value="Male" onclick="verifyPassword()"/>
-							Female<input type="radio" name="gender" id="Female" value="Female" onclick="verifyPassword()"/><br></td>
+							<td>Male<input type="radio" name="gender" id="Male" value="Male" />
+							Female<input type="radio" name="gender" id="Female" value="Female"/><br></td>
 						</tr>
 						<tr>
-							<td style="text-align:right"><input type="submit" id="submit" onclick="verifyPassword()" value="Submit"/></td>
+							<td style="text-align:right"><input type="submit" id="submit" value="Submit"/></td>
 						</tr>
 					</table>
 				</form>
